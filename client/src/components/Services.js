@@ -1,6 +1,6 @@
 import React from "react";
 import "./Services.css";
-import servicesImage from "../assets/servicesimage.jpg"; // Replace with actual image path
+import servicesImage from "../assets/servicesimage.jpg"; 
 
 const Services = () => {
   return (
