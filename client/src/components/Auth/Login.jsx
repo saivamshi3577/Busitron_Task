@@ -65,7 +65,7 @@ const Login = () => {
         {error && <p className="error">{error}</p>}
         <div className="switch-container">
           <p>Don't have an account?</p>
-          <button onClick={() => navigate('/Home')} className="switch-btn">
+          <button onClick={() => navigate('/signup')} className="switch-btn">
             Sign Up
           </button>
         </div>
