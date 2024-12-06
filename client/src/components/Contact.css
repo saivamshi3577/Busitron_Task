@@ -1,0 +1,195 @@
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 50px;
+    z-index: 999;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #555;
+  }
+  
+  .sidebar ul li.active {
+    background-color: #222;
+  }
+  
+  .hamburger-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .hamburger-icon .bar {
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: 0.3s;
+  }
+  
+  .contact-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .contact-form-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-header p {
+    font-size: 1.25rem;
+    color: #777;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .submit-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #555;
+  }
+  
+  .company-details {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .company-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .company-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s forwards;
+  }
+  
+  .slide-in {
+    animation: slideIn 1s forwards;
+  }
+  
+  @media (max-width: 1024px) {
+    .contact-form {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form {
+      gap: 8px;
+    }
+  
+    .contact-header h1 {
+      font-size: 2rem;
+    }
+  
+    .submit-button {
+      font-size: 0.875rem;
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-header h1 {
+      font-size: 1.75rem;
+    }
+  
+    .contact-header p {
+      font-size: 1rem;
+    }
+  
+    .company-details h2 {
+      font-size: 1.25rem;
+    }
+  
+    .company-details p {
+      font-size: 0.875rem;
+    }
+  }
+  

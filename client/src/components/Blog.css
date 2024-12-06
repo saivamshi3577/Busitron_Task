@@ -1,0 +1,182 @@
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 50px;
+    z-index: 999;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #555;
+  }
+  
+  .sidebar ul li.active {
+    background-color: #222;
+  }
+  
+  .hamburger-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .hamburger-icon .bar {
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: 0.3s;
+  }
+  
+  .blog-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .header-subtitle {
+    font-size: 1.25rem;
+    color: #777;
+  }
+  
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .blog-post {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-post h2 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .blog-post p {
+    color: #555;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s forwards;
+  }
+  
+  .zoom-in {
+    animation: zoomIn 1s forwards;
+  }
+  
+  .slide-in {
+    animation: slideIn 1s forwards;
+  }
+  
+  @media (max-width: 1024px) {
+    .blog-posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-posts {
+      grid-template-columns: 1fr;
+    }
+  
+    .hamburger-icon {
+      top: 15px;
+      left: 15px;
+    }
+  
+    .sidebar {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 2rem;
+    }
+  
+    .header-subtitle {
+      font-size: 1rem;
+    }
+  
+    .blog-post h2 {
+      font-size: 1.25rem;
+    }
+  
+    .blog-post p {
+      font-size: 0.875rem;
+    }
+  }
+  

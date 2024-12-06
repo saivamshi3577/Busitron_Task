@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./Home.css";
 import techImage from "../assets/techimage.jpg";
 
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
+  const navigate = useNavigate(); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  // Close sidebar if clicked outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -25,29 +27,31 @@ const Home = () => {
     };
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem("authToken"); 
+    navigate("/login"); 
+  };
+
   return (
     <div className="home-container">
-      {/* Hamburger Menu */}
+    
       <div className="hamburger-icon" onClick={toggleSidebar}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
 
-      {/* Sidebar */}
-      <div
-        className={`sidebar ${isSidebarOpen ? "open" : ""}`}
-        ref={sidebarRef}
-      >
+    
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`} ref={sidebarRef}>
         <ul>
-          <li>Home</li>
-          <li>Services</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <li onClick={() => navigate("/home")}>Home</li>
+          <li onClick={() => navigate("/services")}>Services</li>
+          <li onClick={() => navigate("/blog")}>Blog</li>
+          <li onClick={() => navigate("/contact")}>Contact</li>
+          <li onClick={handleLogout}>Logout</li> 
         </ul>
       </div>
 
-      {/* Main Content */}
       <section className="intro">
         <h1 className="fade-in">Welcome to Busitron</h1>
         <p>Your trusted partner for innovative IT solutions</p>
@@ -56,7 +60,10 @@ const Home = () => {
 
       <section className="about">
         <h2 className="fade-in">About Us</h2>
-        <p>We are a forward-thinking IT company providing transformative digital solutions to businesses worldwide.</p>
+        <p>
+          We are a forward-thinking IT company providing transformative digital
+          solutions to businesses worldwide.
+        </p>
       </section>
 
       <section className="services">
@@ -72,8 +79,15 @@ const Home = () => {
 
       <section className="how-we-do-it">
         <h2 className="slide-in">How We Do It</h2>
-        <p>We use the latest technologies and agile methodologies to deliver top-quality, scalable IT solutions that meet your business goals.</p>
-        <img src={techImage} alt="How We Do It" className="how-we-do-it-image" />
+        <p>
+          We use the latest technologies and agile methodologies to deliver
+          top-quality, scalable IT solutions that meet your business goals.
+        </p>
+        <img
+          src={techImage}
+          alt="How We Do It"
+          className="how-we-do-it-image"
+        />
       </section>
 
       <section className="clients">
@@ -89,11 +103,17 @@ const Home = () => {
       <section className="testimonials">
         <h2 className="fade-in">Client Testimonials</h2>
         <div className="testimonial">
-          <p>"Busitron transformed our business with their innovative IT solutions. They are true experts!"</p>
+          <p>
+            "Busitron transformed our business with their innovative IT
+            solutions. They are true experts!"
+          </p>
           <h4>- John Doe, CEO of Client 1</h4>
         </div>
         <div className="testimonial">
-          <p>"The team at Busitron is professional and reliable. Highly recommend for tech consulting!"</p>
+          <p>
+            "The team at Busitron is professional and reliable. Highly recommend
+            for tech consulting!"
+          </p>
           <h4>- Jane Smith, CTO of Client 2</h4>
         </div>
       </section>

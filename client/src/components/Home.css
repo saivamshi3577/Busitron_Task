@@ -177,8 +177,7 @@ body {
   .client-logo:hover {
     opacity: 1;
   }
-  
-  /* Testimonials Section */
+
   .testimonials {
     background-color: #f9f9f9;
     padding: 40px;
@@ -220,7 +219,7 @@ body {
     }
   }
   
-  /* Animations */
+
   @keyframes fadeIn {
     0% {
       opacity: 0;
