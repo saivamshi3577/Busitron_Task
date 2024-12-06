@@ -42,7 +42,7 @@ const Blog = () => {
 
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={() => navigate("/")}>Home</li>
+          <li onClick={() => navigate("/home")}>Home</li>
           <li onClick={() => navigate("/services")}>Services</li>
           <li onClick={() => navigate("/blog")}>Blog</li>
           <li onClick={() => navigate("/contact")}>Contact</li>

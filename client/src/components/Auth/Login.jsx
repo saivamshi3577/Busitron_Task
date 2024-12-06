@@ -24,7 +24,7 @@ const Login = () => {
 
 
       localStorage.setItem('token', response.data.token);
-      navigate('/Home');
+      navigate('/home');
     } catch (err) {
       setError(err.response?.data?.msg || 'Invalid credentials');
     }
