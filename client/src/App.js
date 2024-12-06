@@ -30,7 +30,6 @@ const FooterComponent = () => {
   const location = useLocation();
 
   if (location.pathname === '/home' || 
-    location.pathname === '/Home' || 
       location.pathname === '/services' || 
       location.pathname === '/blog' || 
       location.pathname === '/contact') {
