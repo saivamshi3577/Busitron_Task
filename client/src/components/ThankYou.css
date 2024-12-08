@@ -1,0 +1,170 @@
+
+.thank-you-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f4a261, #2a9d8f);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .thank-you-box {
+    background-color: #fff;
+    padding: 50px 60px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    animation: scaleUp 1s ease-out;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .thank-you-box h1 {
+    font-size: 3rem;
+    color: #264653;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1s ease-out;
+  }
+  
+  .thank-you-box p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 0.5s forwards;
+  }
+  
+  .thank-you-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInImage 2s ease-out 1s forwards;
+  }
+  
+
+  .home-btn {
+    background-color: #264653;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-btn:hover {
+    background-color: #2a9d8f;
+  }
+  
+  .arrow-icon {
+    margin-right: 8px;
+    font-size: 1.5rem;
+  }
+  
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .thank-you-box {
+      padding: 30px 50px;
+    }
+  
+    .thank-you-box h1 {
+      font-size: 2.5rem;
+    }
+  
+    .thank-you-box p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .thank-you-box {
+      padding: 20px 40px;
+    }
+  
+    .thank-you-box h1 {
+      font-size: 2rem;
+    }
+  
+    .thank-you-box p {
+      font-size: 0.9rem;
+    }
+  
+    .thank-you-img {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .thank-you-box {
+      padding: 15px 30px;
+    }
+  
+    .thank-you-box h1 {
+      font-size: 1.5rem;
+    }
+  
+    .thank-you-box p {
+      font-size: 0.85rem;
+    }
+  
+    .thank-you-img {
+      max-width: 100%;
+    }
+  }
+  

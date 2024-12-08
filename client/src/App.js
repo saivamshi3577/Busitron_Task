@@ -9,6 +9,7 @@ import Services from './components/Services';
 import Blog from './components/Blog';
 import Contact from './components/contact';
 import Footer from './components/Footer'; 
+import ThankYou from './components/ThankYou';
 const App = () => {
   return (
     <Router>
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
         <Route path="/blog" element={<ProtectedRoute><Blog /></ProtectedRoute>} />
         <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+        <Route path="/thankyou" element={<ProtectedRoute><ThankYou /></ProtectedRoute>} />
       </Routes>
       <FooterComponent />
     </Router>
